@@ -1,17 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{823815b7-077c-4d34-bb8a-8a010251a049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files">
+      <UniqueIdentifier>{03add32d-2e21-4a89-a7bb-4ed39a6a553c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\common">
+      <UniqueIdentifier>{bb6ea818-2451-4c10-bec7-cd9490afd395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\graphics">
+      <UniqueIdentifier>{2b5d0d8e-97f4-4ede-9c05-f689004e92bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\maths">
+      <UniqueIdentifier>{6e5e89fe-b476-43d6-8f95-243f877d6b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\physics">
+      <UniqueIdentifier>{5f528854-41f6-4b3c-9380-677366e6a40a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{6748dd42-f5e6-48e9-aa6b-9962b694ea25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics">
+      <UniqueIdentifier>{f760aa46-a783-402c-8c69-ecc1f32f94b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\maths">
+      <UniqueIdentifier>{4de1c031-d513-4eba-9683-4a7ab8dff4ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\physics">
+      <UniqueIdentifier>{e53f7397-f5ea-4f2f-9357-8343ec39b4d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader Files">
+      <UniqueIdentifier>{d30ede9c-a36c-4f2d-a0ad-72fe00853666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader Files\vertex">
+      <UniqueIdentifier>{e1e3afcf-dc22-4b9c-9633-dfac3574bf80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader Files\fragment">
+      <UniqueIdentifier>{ce9d38c3-d3f3-4eea-ad5c-a39f4edb48fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\motion_system.cpp">
+      <Filter>Source Files\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\maths\math.cpp">
+      <Filter>Source Files\maths</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\Camera.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\openGL.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Utils.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\CameraController.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\cloth.cpp">
+      <Filter>Source Files\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\physics\BVH.cpp">
+      <Filter>Source Files\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\Grid.cpp">
+      <Filter>Source Files\graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\physics\cloth.h">
+      <Filter>Include Files\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\physics\motion_system.h">
+      <Filter>Include Files\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\physics\BVH.h">
+      <Filter>Include Files\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maths\math.h">
+      <Filter>Include Files\maths</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\Camera.h">
+      <Filter>Include Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\CameraController.h">
+      <Filter>Include Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\Grid.h">
+      <Filter>Include Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\openGL.h">
+      <Filter>Include Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\constants.h">
+      <Filter>Include Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\macro.h">
+      <Filter>Include Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Utils.h">
+      <Filter>Include Files\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\graphics\shaders\vertex\strainColor.vert">
+      <Filter>Shader Files\vertex</Filter>
+    </None>
+    <None Include="src\graphics\shaders\vertex\uniformColor.vert">
+      <Filter>Shader Files\vertex</Filter>
+    </None>
+    <None Include="src\graphics\shaders\vertex\basic.vert">
+      <Filter>Shader Files\vertex</Filter>
+    </None>
+    <None Include="src\graphics\shaders\fragment\basic.frag">
+      <Filter>Shader Files\fragment</Filter>
+    </None>
   </ItemGroup>
 </Project>

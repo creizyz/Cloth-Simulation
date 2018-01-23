@@ -18,6 +18,37 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common\Utils.cpp" />
+    <ClCompile Include="src\graphics\Camera.cpp" />
+    <ClCompile Include="src\graphics\CameraController.cpp" />
+    <ClCompile Include="src\graphics\Grid.cpp" />
+    <ClCompile Include="src\graphics\openGL.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\maths\math.cpp" />
+    <ClCompile Include="src\physics\BVH.cpp" />
+    <ClCompile Include="src\physics\cloth.cpp" />
+    <ClCompile Include="src\physics\motion_system.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common\constants.h" />
+    <ClInclude Include="src\common\macro.h" />
+    <ClInclude Include="src\common\Utils.h" />
+    <ClInclude Include="src\graphics\Camera.h" />
+    <ClInclude Include="src\graphics\CameraController.h" />
+    <ClInclude Include="src\graphics\Grid.h" />
+    <ClInclude Include="src\graphics\openGL.h" />
+    <ClInclude Include="src\maths\math.h" />
+    <ClInclude Include="src\physics\BVH.h" />
+    <ClInclude Include="src\physics\cloth.h" />
+    <ClInclude Include="src\physics\motion_system.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\graphics\shaders\fragment\basic.frag" />
+    <None Include="src\graphics\shaders\vertex\basic.vert" />
+    <None Include="src\graphics\shaders\vertex\strainColor.vert" />
+    <None Include="src\graphics\shaders\vertex\uniformColor.vert" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{006BCEA4-7045-4479-908D-2084D107F8AA}</ProjectGuid>
@@ -75,7 +106,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\glbinding\include;C:\Program Files %28x86%29\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\glbinding\lib;C:\Program Files %28x86%29\GLFW\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -91,10 +127,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\glbinding\include;C:\Program Files %28x86%29\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\glbinding\lib;C:\Program Files %28x86%29\GLFW\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -110,8 +149,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
